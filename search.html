@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Busify - Search</title>
+  <link rel="stylesheet" href="search.css" />
+</head>
+<body>
+
+
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="logo">
+        <img src="C:\Users\Test\Desktop\Busify-Tishya\busify logo.png" alt="Busify Logo" />
+        <span>BUSIFY</span>
+      </h1>
+
+    
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="search.html" class="active">Home</a></li>
+        <li><a href="buses.html">Buses</a></li>
+        <li><a href="payment.html">Pay Fee</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <main>
+    <div class="box">
+      <h2>Find Your Bus</h2>
+      <label for="destination">Enter Destination:</label>
+      <input type="text" id="destination" placeholder="Add Destination" />
+
+      <a href="buses.html">
+        <button type="button">Search</button>
+      </a>
+    </div>
+  </main>
+
+
+  <footer>
+    <p>© 2025 University Bus Tracker</p>
+  </footer>
+
+ 
+  <script>
+
+
+
+    const toggle = document.querySelector('.menu-toggle');
+    const links = document.querySelector('.nav-links');
+
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('show');
+    });
+
+    // Close drawer when a link is clicked
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => links.classList.remove('show'));
+    });
+
+    // Ensure drawer closes if resized to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) links.classList.remove('show');
+    });
+  </script>
+</body>
+</html>
