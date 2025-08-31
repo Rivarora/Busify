@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications - University Bus Portal</title>
+  <link rel="stylesheet" href="notification.css">
+  <script src="Notification.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="busify logo.png" alt="Bus Logo">
+      <h1>BUSIFY</h1>
+    </div>
+    <button class="menu-toggle">☰</button>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="search.html">Bus Routes</a>
+      <a href="payment.html">Pay Fee</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <h2>Notifications</h2>
+      <div class="notification-card" id="clr1">
+        <p><strong>28 Aug 2025:</strong> Route 5 bus will be delayed by 20 minutes due to traffic.</p>
+      </div>
+      <div class="notification-card" id="clr2">
+        <p><strong>25 Aug 2025:</strong> Monthly pass renewal starts from today.</p>
+      </div>
+      <div class="notification-card" id="clr3">
+        <p><strong>20 Aug 2025:</strong> New bus added for Route 3.</p>
+      </div>
+    </div>
+    
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 University Bus Portal. All rights reserved.</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+
+

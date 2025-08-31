@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Incident Details</title>
+  <link rel="stylesheet" href="view.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo"><img src="busify logo.png" alt="Busify Logo" />Busify</div>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="#">Logout</a>
+    </nav>
+  </header>
+
+  <main class="incident-container">
+    <a href="student.html" class="back-btn">← Back to Dashboard</a>
+
+    <section class="incident-header card">
+      <div class="incident-info">
+        <h1>Bus Delay Incident</h1>
+        <p class="incident-id">Incident ID: INC-2025-001</p>
+      </div>
+      <span class="status investigating">Investigating</span>
+    </section>
+
+    <section class="incident-details">
+      <div class="detail-card card">
+        <h4>Bus Number</h4>
+        <p>#11</p>
+      </div>
+      <div class="detail-card card">
+        <h4>Route</h4>
+        <p>R-12</p>
+      </div>
+      <div class="detail-card card">
+        <h4>Reported Time</h4>
+        <p>08:45 AM</p>
+      </div>
+      <div class="detail-card card">
+        <h4>Location</h4>
+        <p>North Gate</p>
+      </div>
+    </section>
+
+    <section class="description card">
+      <h3>📝 Description</h3>
+      <p>
+        Bus #11 on Route R-12 is experiencing a 15-minute delay due to heavy
+        traffic near the North Gate entrance. The driver has reported the
+        situation, and the dispatch team is working to minimize further
+        delays. Alternative routes are being considered.
+      </p>
+    </section>
+
+    <section class="timeline card">
+      <h3>⏱️ Timeline</h3>
+      <ul>
+        <li><span>08:45 AM</span> Incident reported by Bus Driver</li>
+        <li><span>08:47 AM</span> Dispatch team notified</li>
+        <li><span>08:50 AM</span> Alternative route assessment initiated</li>
+        <li><span>08:55 AM</span> Students notified via app notification</li>
+      </ul>
+    </section>
+
+    <aside class="actions card">
+      <h3>⚙️ Actions</h3>
+      <button class="action-btn">Report Additional Issue</button>
+      <button class="action-btn">Contact Support</button>
+      <button class="action-btn">Share Incident</button>
+    </aside>
+  </main>
+
+  <footer>
+    © 2025 Busify — Campus Transportation Management
+  </footer>
+</body>
+</html>
