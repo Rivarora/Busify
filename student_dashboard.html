@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UniRide Student Dashboard</title>
+  <link rel="stylesheet" href="student.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">
+      <img src="busify logo.png" alt="Busify Logo">
+      <h2>Busify Student</h2>
+    </div>
+    <nav>
+      <a href="#" class="active">Overview</a>
+      <!-- <a href="#">Routes</a> -->
+      <a href="#">Buses</a>
+      <!-- <a href="#">Users</a> -->
+      <a href="v.html">Incidents</a>
+      <a href="#">Notifications</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main">
+    <header class="topbar">
+      <h1>Dashboard</h1>
+      <div>
+        <button class="btn active">Dashboard</button>
+        <!-- <button class="btn">Public Site</button> -->
+      </div>
+    </header>
+
+    <!-- Stats Cards -->
+    <section class="stats">
+      <div class="card"><h4>Total Routes</h4><p>12</p></div>
+      <div class="card"><h4>Active Buses</h4><p>27</p></div>
+      <div class="card"><h4>Registered Users</h4><p>1,284</p></div>
+      <div class="card"><h4>Open Incidents</h4><p class="badge">3</p></div>
+    </section>
+
+    <!-- Recent Incidents -->
+    <section class="card table-card">
+      <h3>⚠️ Recent Incidents</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Bus</th>
+            <th>Route</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>08:45</td><td>#11</td><td>R-12</td>
+            <td><span class="status investigating">Investigating</span></td>
+            <td><button class="btn small"><a href="v.html">View</a></button></td>
+          </tr>
+          <tr>
+            <td>07:10</td><td>#03</td><td>R-03</td>
+            <td><span class="status resolved">Resolved</span></td>
+            <td><button class="btn small"><a href="v.html">View</a></button></td>
+          </tr>
+          <tr>
+            <td>06:30</td><td>#08</td><td>R-07</td>
+            <td><span class="status critical">Critical</span></td>
+            <td><button class="btn small"><a href="v.html">View</a></button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+</body>
+</html>
