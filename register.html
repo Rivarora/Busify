@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register — UniRide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* 🚍 Background - UniBus theme */
+    body {
+      background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 40%, #bbdefb 100%);
+      background-size: 200% 200%;
+      animation: gradientMove 12s ease infinite;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* 🪟 Card - Glassmorphic */
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 1.5rem; /* Reduced from 2.2rem */
+      border-radius: 16px;
+      box-shadow: 0 8px 28px rgba(25, 118, 210, 0.2);
+      width: 340px; /* Narrower */
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem; /* Reduced spacing between fields */
+      animation: fadeIn 0.6s ease-in-out;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(10px);
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* 📝 Heading */
+    h2 {
+      margin-bottom: 0.3rem;
+      color: #0D47A1;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+
+    /* 📄 Labels */
+    label {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #0D47A1;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    /* ✏️ Inputs & Select */
+    input, select {
+      width: 100%;
+      padding: 0.55rem; /* Reduced height */
+      border: 1px solid #cfd8dc;
+      border-radius: 6px;
+      outline: none;
+      font-size: 0.85rem;
+      background: white;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+
+    input:focus, select:focus {
+      border-color: #1976D2;
+      box-shadow: 0 0 6px rgba(25, 118, 210, 0.25);
+      transform: scale(1.01);
+    }
+
+    /* 🚀 Button */
+    .btn {
+      background: linear-gradient(135deg, #1976D2, #2196F3);
+      color: white;
+      padding: 0.7rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 0.3px;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(135deg, #1565C0, #1976D2);
+      transform: translateY(-2px) scale(1.02);
+    }
+
+    /* ❓ Help link */
+    .help-link {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #1976D2;
+      text-decoration: none;
+      margin-top: 0.3rem;
+      transition: color 0.2s;
+    }
+
+    .help-link:hover {
+      color: #0D47A1;
+      text-decoration: underline;
+    }
+    /* Make card flexible on very small screens */
+@media (max-width: 400px) {
+  .card {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  input, select, .btn {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <form class="card">
+    <h2>Create your account</h2>
+
+    <div>
+      <label>Full Name</label>
+      <input placeholder="Jane Doe" />
+    </div>
+
+    <div>
+      <label>Student ID</label>
+      <input placeholder="22CSE1234" />
+    </div>
+
+    <div>
+      <label>Email</label>
+      <input type="email" placeholder="you@university.edu" />
+    </div>
+
+    <div>
+      <label>Preferred Stop</label>
+      <select>
+        <option>North Gate</option>
+        <option>Library Square</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Password</label>
+      <input type="password" placeholder="Create password" />
+    </div>
+
+    <div>
+      <label>Confirm Password</label>
+      <input type="password" placeholder="Repeat password" />
+    </div>
+
+    <button class="btn" type="button">Register</button>
+    <a href="#" class="help-link">Need help?</a>
+  </form>
+
+</body>
+</html>
