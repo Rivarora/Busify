@@ -50,13 +50,13 @@ body {
   color: #fff;
 }
 
-/* ===== Main Section ===== */
+
 .main {
   padding: 2rem;
   background: linear-gradient(135deg, #f9fcff, #eef6fc);
 }
 
-/* ===== Topbar ===== */
+
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -95,7 +95,6 @@ body {
   color: #1976d2;
 }
 
-/* ===== Stats Cards ===== */
 .stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
