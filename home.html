@@ -137,17 +137,7 @@
     </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const scrollReveals = document.querySelectorAll('.scroll-reveal');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) entry.target.classList.add('visible');
-        });
-      }, { threshold: 0.1 });
-      scrollReveals.forEach(el => observer.observe(el));
-    });
-  </script>
+  
 </body>
+<script src="home.js"></script>
 </html>
