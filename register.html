@@ -13,7 +13,6 @@
       font-family: 'Poppins', sans-serif;
     }
 
-    /* 🚍 Background - UniBus theme */
     body {
       background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 40%, #bbdefb 100%);
       background-size: 200% 200%;
@@ -31,16 +30,15 @@
       100% { background-position: 0% 50%; }
     }
 
-    /* 🪟 Card - Glassmorphic */
     .card {
       background: rgba(255, 255, 255, 0.9);
-      padding: 1.5rem; /* Reduced from 2.2rem */
+      padding: 1.5rem;
       border-radius: 16px;
       box-shadow: 0 8px 28px rgba(25, 118, 210, 0.2);
-      width: 340px; /* Narrower */
+      width: 340px;
       display: flex;
       flex-direction: column;
-      gap: 0.7rem; /* Reduced spacing between fields */
+      gap: 0.7rem;
       animation: fadeIn 0.6s ease-in-out;
       border: 1px solid rgba(255, 255, 255, 0.4);
       backdrop-filter: blur(10px);
@@ -51,7 +49,6 @@
       to {opacity: 1; transform: translateY(0);}
     }
 
-    /* 📝 Heading */
     h2 {
       margin-bottom: 0.3rem;
       color: #0D47A1;
@@ -60,7 +57,6 @@
       font-size: 1.3rem;
     }
 
-    /* 📄 Labels */
     label {
       font-weight: 600;
       font-size: 0.85rem;
@@ -69,10 +65,9 @@
       margin-bottom: 0.25rem;
     }
 
-    /* ✏️ Inputs & Select */
     input, select {
       width: 100%;
-      padding: 0.55rem; /* Reduced height */
+      padding: 0.55rem;
       border: 1px solid #cfd8dc;
       border-radius: 6px;
       outline: none;
@@ -87,7 +82,6 @@
       transform: scale(1.01);
     }
 
-    /* 🚀 Button */
     .btn {
       background: linear-gradient(135deg, #1976D2, #2196F3);
       color: white;
@@ -106,7 +100,6 @@
       transform: translateY(-2px) scale(1.02);
     }
 
-    /* ❓ Help link */
     .help-link {
       text-align: center;
       font-size: 0.78rem;
@@ -120,23 +113,22 @@
       color: #0D47A1;
       text-decoration: underline;
     }
-    /* Make card flexible on very small screens */
-@media (max-width: 400px) {
-  .card {
-    width: 100%;
-    padding: 1rem;
-  }
 
-  h2 {
-    font-size: 1.1rem;
-  }
+    @media (max-width: 400px) {
+      .card {
+        width: 100%;
+        padding: 1rem;
+      }
 
-  input, select, .btn {
-    font-size: 0.8rem;
-    padding: 0.5rem;
-  }
-}
+      h2 {
+        font-size: 1.1rem;
+      }
 
+      input, select, .btn {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -177,9 +169,10 @@
       <input type="password" placeholder="Repeat password" />
     </div>
 
-    <button class="btn" type="button"><a href="student_dashboard.html" class="btn">Register</a></button>
+    <button id="registrationBtn" class="btn" type="button">Register</button>
     <a href="#" class="help-link">Need help?</a>
   </form>
 
+  <script src="register.js"></script>
 </body>
 </html>
