@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Busify - Search</title>
+  <link rel="stylesheet" href="search.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="logo">
+        <img src="logo.jpg" alt="Busify Logo" />
+        <span>BUSIFY</span>
+      </h1>
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="Notification.html">Notifications</a></li>
+        <li><a href="payment.html">Pay Fee</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="box">
+      <h2>Find Your Bus</h2>
+      <label for="destination">Enter Destination:</label>
+      <input type="text" id="destination" placeholder="Add Destination" />
+      <button id="searchBtn" type="button">Search</button>
+      <p id="error" style="color:red; display:none;"></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 University Bus Tracker</p>
+  </footer>
+
+  <script>
+    function searchBus() {
+      let place = document.getElementById("destination").value.trim().toLowerCase();
+      let error = document.getElementById("error");
+
+      if (place === "") {
+        error.innerText = "Please enter a destination!";
+        error.style.display = "block";
+      } 
+      else if (place === "ambala") {
+        window.location.href = "buses.html";
+      } 
+      else if (place === "patiala") {
+        window.location.href = "busesp.html";
+      } 
+      else {
+        error.innerText = "No buses found for this destination!";
+        error.style.display = "block";
+      }
+    }
+
+    document.getElementById("searchBtn").addEventListener("click", searchBus);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pay Fee - University Bus Portal</title>
+  <link rel="stylesheet" href="payment.css">
+  <script src="payment.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="logo.jpg" alt="Bus Logo">
+      <h1>BUSIFY</h1>
+    </div>
+    <button class="menu-toggle">☰</button>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="search.html">Bus Routes</a>
+      <a href="notification.html">Notifications</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <h2>Pay Bus Fee</h2>
+      <form class="payment-form">
+        <label for="studentId">Student ID</label>
+        <input type="text" id="studentId" placeholder="Enter your Student ID" required>
+
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" placeholder="Enter amount" required>
+
+        <label for="method">Payment Method</label>
+        <select id="method" required>
+          <option value="">Select Method</option>
+          <option value="upi">UPI</option>
+          <option value="card">Credit/Debit Card</option>
+          <option value="netbanking">Net Banking</option>
+        </select>
+
+        <button type="submit">Pay Now</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 University Bus Portal. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
