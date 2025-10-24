@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busify Login</title>
-    <link rel="stylesheet" href="login.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Busify Login</title>
+  <link rel="stylesheet" href="login.css">
 </head>
 <body>
-<div class="container">
+  <div class="container">
     <!-- Left Side -->
     <div class="left-panel">
-        <img src="busify logo.png" alt="Bus Icon" class="bus-icon">
-        <h1>Busify</h1>
-        <p>Campus Transportation Management</p>
+      <img src="logo.jpg" alt="Bus Icon" class="bus-icon">
+      <h1>BUSIFY</h1>
+      <p>Campus Transportation Management</p>
     </div>
 
     <!-- Right Side -->
     <div class="right-panel">
-        <div class="login-card">
-            <h2>Welcome Back</h2>
-            <p class="subtitle">Sign in to your account</p>
+      <div class="login-card">
+        <h2>Welcome Back</h2>
+        <p class="subtitle">Sign in to your account</p>
 
-            <form>
-                <label>Email / Student ID</label>
-                <input type="text" placeholder="you@university.edu">
+        <form id="loginForm">
+          <label>Email / Student ID</label>
+          <input type="text" id="email" placeholder="you@chitkara.edu.in">
 
-                <label>Password</label>
-                <input type="password" placeholder="••••••••">
+          <label>Password</label>
+          <input type="password" id="password" placeholder="••••••••">
 
-                <div class="options">
-                    <label><input type="checkbox"> Remember me</label>
-                    <a href="#">Forgot password?</a>
-                </div>
+          <div class="options">
+            <label><input type="checkbox" id="rememberMe"> Remember me</label>
+            <a href="#">Forgot password?</a>
+          </div>
 
-                <button type="submit">Sign In ➜</button><br>
-                <p class="register-link">Don't have an account? <a href="register.html">Register here</a></p>
-            </form>
-        </div>
+          <button type="submit">Sign In ➜</button>
+          <p class="register-link">Don't have an account? <a href="register.html">Register here</a></p>
+        </form>
+      </div>
     </div>
+  </div>
 
-</div>
-
+  <script src="login.js"></script>
 </body>
 </html>
+
