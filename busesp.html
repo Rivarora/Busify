@@ -8,7 +8,6 @@
 </head>
 <body>
 
-
   <nav class="navbar">
     <div class="container">
       <h1 class="logo">
@@ -16,17 +15,15 @@
         <span>BUSIFY</span>
       </h1>
 
-      <!-- Hamburger -->
       <button class="menu-toggle" aria-label="Open menu">☰</button>
 
       <ul class="nav-links">
         <li><a href="search.html">Home</a></li>
-        <a href="Notification.html">Notifications</a>
+        <li><a href="Notification.html">Notifications</a></li>
         <li><a href="payment.html">Pay Fee</a></li>
       </ul>
     </div>
   </nav>
-
 
   <main>
     <h2>Buses Going to Patiala</h2>
@@ -34,38 +31,39 @@
     <div class="bus-list">
       <div class="bus-box">
         <h3>Bus No: 101</h3>
-        <!-- <p><strong>Destination:</strong> Patiala</p>
-        <p><strong>Departure:</strong> 8:00 AM</p> -->
-        <a href="stops\stop101.html" class="btn">View Stops</a>
+        <a href="stops/stop101.html" class="btn">View Stops</a>
       </div>
 
       <div class="bus-box">
         <h3>Bus No: 102</h3>
-        <!-- <p><strong>Destination:</strong> Ambala City</p>
-        <p><strong>Departure:</strong> 8:30 AM</p> -->
-        <a href="stops\stop102.html" class="btn">View Stops</a>
+        <a href="stops/stop102.html" class="btn">View Stops</a>
       </div>
 
       <div class="bus-box">
         <h3>Bus No: 103</h3>
-        <!-- <p><strong>Destination:</strong> Petrolpump</p>
-        <p><strong>Departure:</strong> 9:00 AM</p> -->
-        <a href="stops\stop103.html" class="btn">View Stops</a>
+        <a href="stops/stop103.html" class="btn">View Stops</a>
       </div>
 
       <div class="bus-box">
         <h3>Bus No: 104</h3>
-        <!-- <p><strong>Destination:</strong> Devi Mandir</p>
-        <p><strong>Departure:</strong> 9:30 AM</p> -->
-        <a href="stops\stop104.html" class="btn">View Stops</a>
+        <a href="stops/stop104.html" class="btn">View Stops</a>
       </div>
     </div>
   </main>
 
-
   <footer>
     <p>© 2025 University Bus Tracker</p>
   </footer>
+
+  <script>
  
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  </script>
+
 </body>
 </html>
