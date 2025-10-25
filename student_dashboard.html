@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UniRide Student Dashboard</title>
+  <title>Busify Student Dashboard</title>
   <link rel="stylesheet" href="student_dashboard.css">
 </head>
 <body>
@@ -15,31 +15,38 @@
       <h2>Busify Student</h2>
     </div>
     <nav>
-      <a href="#" class="active">Overview</a>
-      <!-- <a href="#">Routes</a> -->
+      <a href="#" class="active">Dashboard</a>
       <a href="search.html">Buses</a>
-      <!-- <a href="#">Users</a> -->
       <a href="payment.html">Pay Fee</a>
       <a href="Notification.html">Notifications</a>
+      <a href="#" id="logoutBtn">Logout</a>
     </nav>
   </aside>
 
   <!-- Main Content -->
   <main class="main">
     <header class="topbar">
-      
-      <div>
-        <button class="btn active">Dashboard</button>
-        <!-- <button class="btn">Public Site</button> -->
-      </div>
+      <!-- Welcome message inserted via JS -->
     </header>
 
     <!-- Stats Cards -->
     <section class="stats">
-      <div class="card"><h4>Total Routes</h4><p>12</p></div>
-      <div class="card"><h4>Active Buses</h4><p>27</p></div>
-      <div class="card"><h4>Registered Users</h4><p>1,284</p></div>
-      <div class="card"><h4>Open Incidents</h4><p class="badge">3</p></div>
+      <div class="card">
+        <h4>Registered Stop</h4>
+        <p id="registeredStop">-</p>
+      </div>
+      <div class="card">
+        <h4>Next Bus Arrival</h4>
+        <p id="nextBus">-</p>
+      </div>
+      <div class="card">
+        <h4>Fee Status</h4>
+        <p id="feeStatus">-</p>
+      </div>
+      <div class="card">
+        <h4>Open Incidents</h4>
+        <p id="openIncidents">-</p>
+      </div>
     </section>
 
     <!-- Recent Incidents -->
@@ -76,5 +83,7 @@
     </section>
   </main>
 
+  <script src="student_dashboard.js"></script>
 </body>
 </html>
+
