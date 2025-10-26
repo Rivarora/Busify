@@ -1,4 +1,3 @@
-// Auto-fill saved email
 const savedEmail = localStorage.getItem("savedEmail");
 if (savedEmail) {
   document.getElementById("email").value = savedEmail;
@@ -16,22 +15,27 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     return;
   }
 
-  const storedUser = JSON.parse(localStorage.getItem("busifyUser"));
+  const users = JSON.parse(localStorage.getItem("busifyUsers")) || [];
 
-  if (!storedUser) {
-    alert("No user found. Please sign up first.");
+  if (users.length === 0) {
+    alert("No registered users found. Please sign up first.");
     return;
   }
+  const matchedUser = users.find(
+    (user) =>
+      (user.email === email || user.studentId === email) &&
+      user.password === password
+  );
 
-  if ((email === storedUser.email || email === storedUser.studentId) && password === storedUser.password) {
+  if (matchedUser) {
     if (rememberMe) {
       localStorage.setItem("savedEmail", email);
     } else {
       localStorage.removeItem("savedEmail");
     }
 
-    alert(`Welcome back, ${storedUser.fullname}!`);
-    window.location.href = "d.html";
+    alert(`Welcome back, ${matchedUser.fullname}!`);
+    window.location.href = "student_dashboard.html";
   } else {
     alert("Invalid email/ID or password.");
   }
