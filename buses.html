@@ -8,7 +8,7 @@
 </head>
 <body>
 
-
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="container">
       <h1 class="logo">
@@ -16,51 +16,58 @@
         <span>BUSIFY</span>
       </h1>
 
+      <!-- Hamburger -->
       <button class="menu-toggle" aria-label="Open menu">☰</button>
 
       <ul class="nav-links">
         <li><a href="search.html">Home</a></li>
-        <a href="C:\users\dell\group\busify\Notification.html">Notifications</a>
+        <li><a href="buses.html" class="active">Buses</a></li>
         <li><a href="payment.html">Pay Fee</a></li>
       </ul>
     </div>
   </nav>
 
-
+  <!-- Main -->
   <main>
     <h2>Buses Going to Ambala</h2>
 
     <div class="bus-list">
       <div class="bus-box">
         <h3>Bus No: 201</h3>
-        
         <a href="stops/stop201.html" class="btn">View Stops</a>
       </div>
 
       <div class="bus-box">
         <h3>Bus No: 202</h3>
-        
         <a href="stops/stop202.html" class="btn">View Stops</a>
       </div>
 
       <div class="bus-box">
         <h3>Bus No: 203</h3>
-       
         <a href="stops/stop203.html" class="btn">View Stops</a>
       </div>
 
       <div class="bus-box">
         <h3>Bus No: 204</h3>
-       
         <a href="stops/stop204.html" class="btn">View Stops</a>
       </div>
     </div>
   </main>
 
-
   <footer>
     <p>© 2025 University Bus Tracker</p>
   </footer>
- 
+
+  <!-- JavaScript -->
+  <script>
+    // 🟦 Mobile menu toggle (for small screens)
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  </script>
+
 </body>
 </html>
