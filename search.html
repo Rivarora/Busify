@@ -8,6 +8,15 @@
 </head>
 <body>
 
+  <!-- 🚨 LOGIN CHECK -->
+  <script>
+    const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    if (!loggedInUser) {
+      alert("Please login first!");
+      window.location.href = "login.html";
+    }
+  </script>
+
   <nav class="navbar">
     <div class="container">
       <h1 class="logo">
@@ -38,6 +47,7 @@
   </footer>
 
   <script>
+    // Search Function
     function searchBus() {
       let place = document.getElementById("destination").value.trim().toLowerCase();
       let error = document.getElementById("error");
