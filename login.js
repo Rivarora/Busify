@@ -34,9 +34,10 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
       localStorage.removeItem("savedEmail");
     }
 
-    alert(`Welcome back, ${matchedUser.fullname}!`);
+    //alert(`Welcome back, ${matchedUser.fullname}!`);
     window.location.href = "student_dashboard.html";
   } else {
     alert("Invalid email/ID or password.");
   }
 });
+
