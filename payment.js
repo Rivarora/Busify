@@ -50,3 +50,4 @@ document.querySelector(".payment-form").addEventListener("submit", (e) => {
 if (user.role === "student") {
   document.getElementById("studentId").value = user.username;
 }
+
